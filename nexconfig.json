@@ -1,0 +1,46 @@
+{
+    "name": "spring-logger",
+    "version": "0.0.1",
+    "description": "Basic logger middleware recipe",
+    "keywords": [
+        "spring-boot",
+        "recipe",
+        "nex",
+        "java",
+        "backend",
+        "middleware",
+        "logger"
+    ],
+    "files": [
+        "recipes/spring-logger",
+        "src/main/java/com/example/deneme/middleware",
+        "src/main/java/com/example/deneme/controller"
+    ],
+    "setup": {
+        "files": {
+            "recipes/spring-logger": {
+                "README.md": "recipes/spring-logger"
+            },
+            "src/main/java/com/example/deneme/middleware": {
+                "RequestLoggingMiddleware.java": "src/main/java/com/example/{project-name}/middleware"
+            }
+        },
+        "variants": [
+            {
+                "name": "test-controller",
+                "description": "Add test controller",
+                "setup": {
+                    "files": {
+                        "src/main/java/com/example/deneme/controller": {
+                            "HomeController.java": "src/main/java/com/example/{project-name}/controller"
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    "var": [
+        "pkg",
+        "project-name"
+    ]
+}
